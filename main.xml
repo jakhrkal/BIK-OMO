@@ -125,7 +125,7 @@
         Najdi všechny střelné zbraně prodané zákazníkovi jménem "Štěpán Střelený".
       </query>
       <query>
-        Najdi všechny zákazníky kteří si alespoň jednou byli zastřílet na střelnici v ulici "Jedlová".
+        Najdi všechny zákazníky kteří si alespoň jednou byli zastřílet na střelnicích se vzdáleností 50 metrů.
       </query>
       <query>
         Najdi všechny objednávky vyřízené zaměstnancem jménem "Norbert Netrefil".
@@ -190,7 +190,7 @@
        <cm_picture>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="university1.png" />
+            <imagedata fileref="semestralka2.png" />
           </imageobject>
         </mediaobject>
       </cm_picture>
@@ -214,31 +214,19 @@
 
       <cm_discussion>
           <para>
-            Protože zákazníci i zaměstnanci jsou lidé, zvolil jsem jako Kind poskytující identitu třídu Person. Třída může vystupovat ve 2 rolích - Customer a Emmployee, protože osoba může být současně zákazníkem i zaměstancem.
+            Protože zákazníci i zaměstnanci jsou lidé, zvolil jsem jako Kind poskytující identitu třídu Person. Třída může vystupovat ve 2 rolích - Customer a Emmployee, protože osoba může být současně zákazníkem i zaměstancem. Zákazník může navíc patřit do kolektivu VIP členů - VIPMembers
           </para>
           <para>
-            Kind Goods popisuje zboží a má několik Subkinds - Gun, Ammo, Accessory.
+            Objednávky - Order jsou modelovány jako Relator. Objednávku může zadávat jak zaměstnanec (např. objedná zákazníkovi zboží které zrovna nemá skladem) nebo přímo zákazník (např. v e-shopu). Objednávat lze dva druhy produktů: střelnici a zboží (zbraně). Objednávka vždy prochází dvěma fázemi - Ordered a Paid.
           </para>
           <para>
-            Ve zvlášním Kindu jsou modelovány objednávky - Order. Objednávku může zadávat jak zaměstnanec (např. objedná zákazníkovi zboží které zrovna nemá skladem) nebo přímo zákazník (např. v e-shopu).
-          </para>
-          <comment>
-          	KUBA: další 3 para jsou z původního ukázkového dokumentu. Nepamatuju si jak to tam přestně máme, tak to prosím updatni tím co máme na tom schématu, díky.
-          </comment>
-          <para>
-          ----
-            Abychom mohli v systému evidovat všechny aktuální studenty, tedy i ty, kteří dočasně přerušili studium, vytvořil jsem dvě fáze studenta - student je buď aktivní a má zapsány předměty, nebo je suspendován a předměty žádné zapsané nemá.
-          ----
+          	Střelnice jsou modelovány ve třídě ShootingGallery a provádí se na ně rezervace pomocí třídy GalleryReservation. Každá rezervace je částečně definovaná i termínem na kdy je rezervováno, má tedy essential part Term.
           </para>
           <para>
-          ----
-            Universitu jsem se rozhodl modelovat jako integrální celek složený z rektorátu a fakult, kvůli potřebě vyjádřit neoddělitelnost fakult i rektorátu od univerzity. Jejich oddělením by totiž rektorát přestal být rektorátem, podobně pak fakulta.
-          ----
+            Category Goods popisuje zboží a má několik Kinds - Weapon, Ammunition. K tomu sledujeme dostupnost každého zboží pomocí modu Availability.
           </para>
           <para>
-          ----
-            Co se týče relací, rozhodl jsem se vytvořit relátor. který SubjectRegistration umožňuje evidovat datum zápisu předmětu studentem. Pro evidenci jednotlivých cvičení a přednášek jsem využil relator Teaching, který vlastně realizuje vazbu mezi vyučujícím a předmětem.
-          ----
+          Třída zbraň (Weapon) se pak dělí na podtřídy bodná zbraň (StabWeapon) a střelná zbraň (Gun), u níž ještě dále sledujeme z jakých součástek se skládá (zásobník, rukojeť, hlaveň), z nichž některé jsou essential, některé inseparable, tak, jak ukázala analýza u klienta.
           </para>
       </cm_discussion>
       
@@ -247,7 +235,7 @@
           <name>Kind</name>
           <usages>
             <usage>
-              <class>Person, Goods, Subject</class>
+              <class>Person, Weapon, Gallery reservation</class>
               <relation>-</relation>
             </usage>
           </usages>
@@ -256,7 +244,7 @@
           <name>Subkind</name>
           <usages>
             <usage>
-              <class>Ammo, Gun, Accesory</class>
+              <class>StabWeapon, Gun</class>
               <relation>-</relation>
             </usage>
           </usages>
@@ -280,28 +268,47 @@
           <name>Phase</name>
           <usages>
             <usage>
-              <class>???Active Student, Suspended Student</class>
-              <relation>Student</relation>
-              <comment>Student může být aktivní, nebo jeho studium může být přerušeno.</comment>
+              <class>Ordered, Paid</class>
+              <relation>Order</relation>
+              <comment>Objednávka může být teprve objednaná nebo už zaplacená.</comment>
             </usage>
           </usages>
         </cm_concept>
         <cm_concept>
           <name>Category</name>
+          <usages>
+            <usage>
+              <class>Goods</class>
+              <relation>-</relation>
+            </usage>
+          </usages>
         </cm_concept>
         <cm_concept>
           <name>RoleMixin</name>
+          <usages>
+            <usage>
+              <class>OrderingPerson</class>
+              <relation>-</relation>
+              <comment>Objednávku může zadávat zaměstnanec i zákazník.</comment>
+            </usage>
+          </usages>
         </cm_concept>
         <cm_concept>
           <name>Mixin</name>
+          <usages>
+            <usage>
+              <class>FreeVisitGallery</class>
+              <relation>-</relation>
+            </usage>
+          </usages>
         </cm_concept>
         <cm_concept>
           <name>Whole</name>
           <usages>
             <usage>
-              <class>University</class>
-              <relation>University - Rectorate, University - Faculty</relation>
-              <comment>Univerzita je celek tvořený rektorátem a jednotlivými fakultami.</comment>
+              <class>Gun</class>
+              <relation>Barrel, Grip, FiringPin, Magazine</relation>
+              <comment>Střelná zbraň se skládá z hlavně, rukojeti, úderníku a zásobníku.</comment>
             </usage>
           </usages>
         </cm_concept>
@@ -309,29 +316,28 @@
           <name>Part</name>
           <usages>
             <usage>
-              <class>Rectorate, Faculty</class>
-              <relation>University</relation>
-              <comment>Obě části jsou inseparable a povinné. Tj. pouze jedna kombinace povinností vztahu celek-část. Za toto nebude žádný bod.</comment>
+              <class>Barrel, Grip, FiringPin, Magazine</class>
+              <relation>Gun</relation>
+              <comment>Zadavatel zakázky specifikoval, že jediná neoddělitelná část střelné zbraně je hlaveň, všechno ostatní lze vyměnit; stejně tak jako že zbraň je zbraní na základě toho, že má hlaveň a zásobník.</comment>
             </usage>
           </usages>
         </cm_concept>
         <cm_concept>
           <name>Quantity</name>
+          <usages>
+            <usage>
+              <class>Plastic</class>
+              <relation>-</relation>
+            </usage>
+          </usages>
         </cm_concept>
         <cm_concept>
           <name>Collective</name>
           <usages>
             <usage>
-              <class>Faculty</class>
-              <relation>Department</relation>
-              <comment>Fakulta je tvořena skupinou kateder.</comment>
-            </usage>
-          </usages>
-          <usages>
-            <usage>
-              <class>Department</class>
-              <relation>Professor</relation>
-              <comment>Katedra je tvořena jejími zaměstnanci.</comment>
+              <class>VIPMembers</class>
+              <relation>Customer</relation>
+              <comment>Zákazníci mohou patřit mezi VIP klientelu.</comment>
             </usage>
           </usages>
         </cm_concept>
@@ -340,14 +346,25 @@
         </cm_concept>
         <cm_concept>
           <name>Mode</name>
+          <usages>
+            <usage>
+              <class>Availibility</class>
+              <relation>Goods</relation>
+            </usage>
+          </usages>
         </cm_concept>
         <cm_concept>
           <name>Relator</name>
           <usages>
             <usage>
-              <class>Subject Registration</class>
-              <relation>Student - Subject</relation>
-              <comment>Student se ke studiu předmětu zapisuje zápisem do indexu se zaznamenaným datem zápisu.</comment>
+              <class>Order</class>
+              <relation>OrderingPerson - Goods</relation>
+              <comment>Objednávající osoba si objednává v určitý čas, za určitou celkovou částku zboží...</comment>
+            </usage>
+            <usage>
+            	<class>Order</class>
+            	<relation>OrderingPerson - GalleryReservation</relation>
+            	<comment>...nebo čas na střelnici.</comment>
             </usage>
           </usages>
         </cm_concept>
@@ -359,6 +376,7 @@
           <para>V tabulce konceptuálních konceptů zaznamenejte, jaké koncepty OntoUML modelu jste ve své semestrální práci použili a kde.
           Vyjmenujte pouze ty zástupce, kteří se podílejí na bodovém hodnocení. Za každý správně použitý koncept
           získáte body do hodnocení konceptuální části semestrální práce. Ohodnocení jednotlivých konceptů najdete na eduxu.</para>
+<para>-----------   KONEC   -------------</para>
         </comment>
       </cm_concepts>
       
@@ -372,6 +390,8 @@
           </imageobject>
         </mediaobject>
       </im_picture>
+
+
 
       <comment>
         <para>Požadavky na implementační model tříd:</para>
