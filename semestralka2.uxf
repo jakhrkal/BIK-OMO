@@ -11,9 +11,8 @@
     </coordinates>
     <panel_attributes>bg=light_gray
 &lt;&lt;phase&gt;&gt;
-*SimpleClass*
---
-Ordered</panel_attributes>
+*Ordered*
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -26,9 +25,8 @@ Ordered</panel_attributes>
     </coordinates>
     <panel_attributes>bg=light_gray
 &lt;&lt;phase&gt;&gt;
-*SimpleClass*
---
-Paid</panel_attributes>
+*Paid*
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -548,18 +546,6 @@ m2=0..*
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>490</x>
-      <y>70</y>
-      <w>240</w>
-      <h>170</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-{disjoint, complete}</panel_attributes>
-    <additional_attributes>30;150;220;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
       <x>40</x>
       <y>30</y>
       <w>130</w>
@@ -694,18 +680,6 @@ m2=1
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>350</x>
-      <y>70</y>
-      <w>198</w>
-      <h>170</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-{disjoint, complete}</panel_attributes>
-    <additional_attributes>170;150;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
       <x>360</x>
       <y>590</y>
       <w>110</w>
@@ -787,5 +761,45 @@ m2=0..*
     </coordinates>
     <panel_attributes>lt=.()</panel_attributes>
     <additional_attributes>130.0;130.0;70.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>540</x>
+      <y>70</y>
+      <w>160</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+phase</panel_attributes>
+    <additional_attributes>140;30;30;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>410</x>
+      <y>70</y>
+      <w>110</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+phase</panel_attributes>
+    <additional_attributes>30;30;90;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>120</y>
+      <w>330</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+XOR</panel_attributes>
+    <additional_attributes>30;50;310;50</additional_attributes>
   </element>
 </diagram>
