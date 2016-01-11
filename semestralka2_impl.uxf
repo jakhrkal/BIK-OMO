@@ -347,14 +347,14 @@ phase</panel_attributes>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>416</x>
-      <y>64</y>
-      <w>296</w>
+      <x>432</x>
+      <y>144</y>
+      <w>200</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=.
 XOR</panel_attributes>
-    <additional_attributes>24;40;136;40;280;40</additional_attributes>
+    <additional_attributes>24;40;184;40</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
@@ -409,68 +409,16 @@ XOR</panel_attributes>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>112</x>
+      <x>120</x>
       <y>424</y>
-      <w>184</w>
+      <w>192</w>
       <h>168</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-m1=0..1
-m2=1
-customers: Set
-</panel_attributes>
-    <additional_attributes>168;24;72;80;88;152</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>64</x>
-      <y>400</y>
-      <w>208</w>
-      <h>56</h>
-    </coordinates>
     <panel_attributes>lt=&lt;-
-m1=0..*
-</panel_attributes>
-    <additional_attributes>192;24;120;24;24;40</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>16</x>
-      <y>440</y>
-      <w>137</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>bg=light_gray
-*_customers: Set_*
-
-</panel_attributes>
-    <additional_attributes/>
-    <custom_code>//Modify the code below to
-//define the element's behavior.
-//
-
-int y=20;
-
-for(String textline : textlines) {
-	y = y + textHeight();
-	printCenter(textline,y);
-}
-
-height = onGrid(y + 25);
-
-//drawRect(0,0,width,height);
-
-Polygon p = new Polygon();
-p.addPoint(0, 20);
-p.addPoint(width/2, 0);
-p.addPoint(width, 20);
-p.addPoint(width, height-20);
-p.addPoint(width/2, height);
-p.addPoint(0, height-20);
-drawPolygon(p);
-</custom_code>
+m1=1
+m2=0..n
+vipmembers</panel_attributes>
+    <additional_attributes>176;24;64;80;104;152</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Class</type>
@@ -764,8 +712,8 @@ m2=0..1
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
-m1=1
-m2=0..1
+m1=0..1
+m2=1
 </panel_attributes>
     <additional_attributes>24;24;168;104</additional_attributes>
   </element>
@@ -778,8 +726,8 @@ m2=0..1
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
-m1=1
-m2=0..1
+m1=0..1
+m2=1
 </panel_attributes>
     <additional_attributes>24;24;208;80</additional_attributes>
   </element>
@@ -900,7 +848,7 @@ CompetencyRelator: OrderedCollection
       <w>266</w>
       <h>144</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-&lt;
 m1=1
 m2=0..1
 CompetencyRelator: OrderedCollection
@@ -1076,5 +1024,20 @@ m1=0..*</panel_attributes>
     <panel_attributes>lt=&lt;-
 m1=0..*</panel_attributes>
     <additional_attributes>24;24;112;104</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>312</x>
+      <y>88</y>
+      <w>664</w>
+      <h>536</h>
+    </coordinates>
+    <panel_attributes>lt=-&lt;
+m1=1
+m2=0..*
+freeVisit
+</panel_attributes>
+    <additional_attributes>24;512;336;520;344;24;648;24</additional_attributes>
   </element>
 </diagram>
