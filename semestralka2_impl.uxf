@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>752</x>
+      <y>152</y>
+      <w>240</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Goods*
+--
+prize: Integer [1]
+--
+BuyAllowed()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>912</x>
+      <y>440</y>
+      <w>200</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Gun*
+--
+kind: String[1]
+classification: String[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1016</x>
+      <y>312</y>
+      <w>208</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Ammunition*
+--
+count: Integer[1]
+calibers Integer[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1208</x>
+      <y>552</y>
+      <w>88</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Grip*
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1248</x>
+      <y>456</y>
+      <w>136</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Barrel*
+--
+diameter: Float[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1080</x>
+      <y>632</y>
+      <w>104</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*FiringPin*
+--
+type: String[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>888</x>
+      <y>648</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Magazine*
+--
+ammoCount: Integer[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1216</x>
+      <y>680</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Plastic*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>136</x>
+      <y>336</y>
+      <w>96</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Term*
+--
+from: Date[1]
+to: Date[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>128</x>
+      <y>184</y>
+      <w>160</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*GalleryReservation*
+--
+prize: Integer[1]
+--
+IsFree()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>128</x>
+      <y>32</y>
+      <w>160</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*ShootingGallery*
+--
+shootDistance: Float[1]
+position: Integer[1]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>256</x>
+      <y>416</y>
+      <w>128</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+
+*VIPMembres*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>504</x>
+      <y>224</y>
+      <w>128</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*OrderRelator*
+--
+date: Date[1]
+totalPrize: Integer[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>448</x>
+      <y>672</y>
+      <w>224</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Person*
+--
+Name: String[1]
+PersonID: String[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>528</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*EmployeesRole*
+--
+salary: Integer[1]
+rank: Stringp[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>176</x>
+      <y>576</y>
+      <w>160</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*CustomerRole*
+--
+registrationDate: Date[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>488</x>
+      <y>824</y>
+      <w>160</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*GunLicense*
+--
+type: String[1]
+id: String[i]
+validity: Date[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>72</x>
+      <y>736</y>
+      <w>136</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*CompetencyRelator*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>432</x>
+      <y>360</y>
+      <w>184</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*OrderingPersonRoleMixin*
+--
+ID: Integer[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>960</x>
+      <y>72</y>
+      <w>192</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*FreeVisitGalleryMixin*
+--
+count: Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>736</x>
+      <y>312</y>
+      <w>200</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Weapon*
+--
+Unlicensed: Boolean[1]
+SerialNumber: String[1]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>672</x>
+      <y>440</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*StabWeapon*
+--
+size: Integer[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>48</y>
+      <w>112</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+phase</panel_attributes>
+    <additional_attributes>24;24;96;176</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>64</y>
+      <w>296</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.
+XOR</panel_attributes>
+    <additional_attributes>24;40;136;40;280;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>48</y>
+      <w>88</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+phase</panel_attributes>
+    <additional_attributes>72;24;24;176</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>744</x>
+      <y>376</y>
+      <w>208</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.
+XOR</panel_attributes>
+    <additional_attributes>24;40;192;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>736</x>
+      <y>352</y>
+      <w>104</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+</panel_attributes>
+    <additional_attributes>24;88;88;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>352</y>
+      <w>112</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+</panel_attributes>
+    <additional_attributes>96;88;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>112</x>
+      <y>424</y>
+      <w>184</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..1
+m2=1
+customers: Set
+</panel_attributes>
+    <additional_attributes>168;24;72;80;88;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>64</x>
+      <y>400</y>
+      <w>208</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+</panel_attributes>
+    <additional_attributes>192;24;120;24;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>16</x>
+      <y>440</y>
+      <w>137</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_customers: Set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>16</y>
+      <w>104</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*OrderedPhase*
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>544</x>
+      <y>16</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*PaidPhase*
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>968</x>
+      <y>152</y>
+      <w>184</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..* 
+m2=1</panel_attributes>
+    <additional_attributes>24;24;168;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1136</x>
+      <y>136</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Availibity*
+--
+doodsInStock: Integer[1]
+deliveryTime: Date[1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>192</y>
+      <w>56</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>24;120;40;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>944</x>
+      <y>192</y>
+      <w>128</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=0..*</panel_attributes>
+    <additional_attributes>112;120;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1088</x>
+      <y>376</y>
+      <w>264</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>24;88;248;24</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>1272</x>
+      <y>352</y>
+      <w>137</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_guns set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1088</x>
+      <y>464</y>
+      <w>176</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>160;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1064</x>
+      <y>488</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>144;80;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1040</x>
+      <y>488</y>
+      <w>136</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>120;144;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>928</x>
+      <y>488</y>
+      <w>104</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..1
+
+</panel_attributes>
+    <additional_attributes>88;160;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>1088</x>
+      <y>224</y>
+      <w>137</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_goods set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>968</x>
+      <y>176</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>24;24;120;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1224</x>
+      <y>576</y>
+      <w>64</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>48;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>136</x>
+      <y>216</y>
+      <w>96</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>80;120;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>144</x>
+      <y>72</y>
+      <w>40</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>24;24;24;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>488</x>
+      <y>568</y>
+      <w>184</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>24;24;168;104</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>312</x>
+      <y>592</y>
+      <w>224</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>24;24;208;80</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>224</x>
+      <y>104</y>
+      <w>177</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_GalleryReservations: Set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>216</x>
+      <y>128</y>
+      <w>112</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+</panel_attributes>
+    <additional_attributes>24;56;96;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>216</y>
+      <w>312</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+OrderRelator: OrderedCollection
+</panel_attributes>
+    <additional_attributes>24;24;120;104;296;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>608</x>
+      <y>192</y>
+      <w>266</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=0..*
+OrderRelator: OrderedCollection
+</panel_attributes>
+    <additional_attributes>232;24;160;80;24;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>640</x>
+      <y>24</y>
+      <w>336</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>24;24;320;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>184</x>
+      <y>736</y>
+      <w>320</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=0..1
+CompetencyRelator: OrderedCollection
+</panel_attributes>
+    <additional_attributes>304;128;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>40</x>
+      <y>608</y>
+      <w>266</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..1
+CompetencyRelator: OrderedCollection
+</panel_attributes>
+    <additional_attributes>88;128;184;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>264</y>
+      <w>226</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+OrderRelator: OrderedCollection
+</panel_attributes>
+    <additional_attributes>48;96;184;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>784</x>
+      <y>8</y>
+      <w>336</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>24;144;24;24;320;24;320;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>232</x>
+      <y>392</y>
+      <w>296</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+ordering</panel_attributes>
+    <additional_attributes>24;184;280;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>488</x>
+      <y>392</y>
+      <w>92</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+ordering</panel_attributes>
+    <additional_attributes>48;136;56;24</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>728</x>
+      <y>768</y>
+      <w>137</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_persons: Set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>648</x>
+      <y>696</y>
+      <w>160</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+</panel_attributes>
+    <additional_attributes>24;24;128;48;144;72</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>752</x>
+      <y>576</y>
+      <w>137</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*_weapons: Set_*
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to
+//define the element's behavior.
+//
+
+int y=20;
+
+for(String textline : textlines) {
+	y = y + textHeight();
+	printCenter(textline,y);
+}
+
+height = onGrid(y + 25);
+
+//drawRect(0,0,width,height);
+
+Polygon p = new Polygon();
+p.addPoint(0, 20);
+p.addPoint(width/2, 0);
+p.addPoint(width, 20);
+p.addPoint(width, height-20);
+p.addPoint(width/2, height);
+p.addPoint(0, height-20);
+drawPolygon(p);
+</custom_code>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>488</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>136;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>704</x>
+      <y>472</y>
+      <w>128</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>24;24;112;104</additional_attributes>
+  </element>
+</diagram>
