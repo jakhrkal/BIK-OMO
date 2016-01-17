@@ -58,7 +58,6 @@
     <problem_domain>
     zamestnanci, ruzne pobocky, informace zadavaji zamci, v systému sledujeme registrované zákazníky - se zbrojním pasem
       <para>Firma Ostrostřelec má několik poboček, každá pobočka má obchod se zbraněmi a střelnici.</para>
-      <comment>TODO: Asi bychom měli evidovat zboží skladem na každé jednotlivé pobočce??</comment>
       
       <para>Požadovaný systém musí obsahovat databázi zaměstnanců - u každého prodeje musí být dohledatelné kdo zboží vydal.</para>
       
@@ -376,7 +375,6 @@
           <para>V tabulce konceptuálních konceptů zaznamenejte, jaké koncepty OntoUML modelu jste ve své semestrální práci použili a kde.
           Vyjmenujte pouze ty zástupce, kteří se podílejí na bodovém hodnocení. Za každý správně použitý koncept
           získáte body do hodnocení konceptuální části semestrální práce. Ohodnocení jednotlivých konceptů najdete na eduxu.</para>
-<para>-----------   KONEC   -------------</para>
         </comment>
       </cm_concepts>
       
@@ -386,7 +384,7 @@
        <im_picture>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="university1_impl.png" />
+            <imagedata fileref="semestralka3_impl.png" />
           </imageobject>
         </mediaobject>
       </im_picture>
@@ -416,14 +414,12 @@
 
     <implementation>
       <package>
-        <file fileref="semestralka-uni.st" />
+        <file fileref="hrkaljak-vanazde1-strelnice.st" />
       </package>
       <impl_discussion>
-        <para>Implementace obsahuje N tříd a M testů.
+        <para>Implementace obsahuje 23 tříd a 18 testů.
         </para>
-        <para>Požadavek X jsem zajistil implementací metody Y, která používá Z.
-          Konzistenci "brusle" mezi V a W jsem zajistil tak a tak.
-          ...
+        <para>Požadavky 1, 2 a 3 jsme splinili umožněním navigace z kolekce zákazníků / zaměstnanců na objednávky a z objednávek na zboží a střelnice. O výpočet ceny z požadavku 4 se stará metoda totalPrice třídy OrderRelator.
         </para>
         
         <comment>
@@ -437,12 +433,8 @@
           <name>Enforcing of multiplicity 1 (arrow side)</name>
           <usages>
             <usage>
-              <class>Subject</class>
-              <method>class method #guarantor:</method>
-            </usage>
-              <usage>
-              <class>SubjectRegistration</class>
-              <method>class method #subject:</method>
+              <class>Gun</class>
+              <method>#initialise (barrel, grip, firingPin)</method>
             </usage>
             <usage>
                 <comment>(1 point total)</comment>
@@ -450,43 +442,37 @@
           </usages>
         </impl_concept>
         <impl_concept>
-          <name>Printing method (polymorphic)</name>
+        <name>Checking source multiplicity</name>
           <usages>
             <usage>
-              <class>Subject</class>
-              <method>#printString:</method>
+              <class>Gun</class>
+              <method>test #testMultiplicityGunParts</method>
             </usage>
             <usage>
                 <comment>(1 point total)</comment>
             </usage>
           </usages>
-        </impl_concept>
-        <impl_concept>
-          <name>Class method</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Class method polymorphism</name>
         </impl_concept>
         <impl_concept>
           <name>Collection operations</name>
           <usages>
             <usage>
-              <class>ActiveStudentPhase</class>
-              <method>#studiesSet</method>
-              <comment>#collect:</comment>
+              <class>TestingSem2</class>
+              <method>#getCustByName</method>
+              <comment>#detect:</comment>
             </usage>
             <usage>
-              <class>Department</class>
-              <method>#GuaranteedSubjectsSet:</method>
-              <comment>#flatCollect:, #select:</comment>
+              <class>OrderRelator</class>
+              <method>#totalPrice:</method>
+              <comment>#inject:into:</comment>
             </usage>
             <usage>
-              <class>Department</class>
-              <method>#taughtSubjectsSet:</method>
+              <class>TestingSem2</class>
+              <method>#testD1:</method>
               <comment>#flatCollect:</comment>
             </usage>
             <usage>
-              <comment>(3 points total: #collect:, #flatCollect, #select:)</comment>
+              <comment>(3 points total: #detect:, #flatCollect, #inject:into:)</comment>
             </usage>
           </usages>
         </impl_concept>
@@ -494,7 +480,7 @@
           <name>Extending super</name>
           <usages>
             <usage>
-              <class>ResearchMembershipRelator</class>
+              <class>Weapon</class>
               <method>#initialize</method>
             </usage>
             <usage>
@@ -503,51 +489,11 @@
         </usages>
         </impl_concept>
         <impl_concept>
-          <name>Message comment that executes</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Simple delegation</name>
-          <usages>
-            <usage>
-              <class>Student, ActiveStudentPhase</class>
-              <method>#studies</method>
-            </usage>
-            <usage>
-              <comment>(2 points total)</comment>
-          </usage>
-        </usages>
-        </impl_concept>
-        <impl_concept>
-          <name>Self delegation</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Choosing object (polymorphism)</name>
-          <usages>
-            <usage>
-              <class>TeacherRole, SubjectGuarantorRole</class>
-              <method>#salaryComponent</method>
-              <comment>Choosing object implemented in test #testSalaryPolymorphism.</comment>
-            </usage>
-            <usage>
-              <comment>(2 points total)</comment>
-          </usage>
-        </usages>
-        </impl_concept>
-        <impl_concept>
-          <name>Double dispatch</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Converter  method</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Converter constructor method</name>
-        </impl_concept>
-        <impl_concept>
           <name>Constant method</name>
           <usages>
             <usage>
-              <class>Professor</class>
-              <method>class methods #fixRate, #bonusPerYear</method>
+              <class>EmployeesRole</class>
+              <method>#bonuses</method>
             </usage>
             <usage>
               <comment>(1 point total)</comment>
@@ -558,28 +504,19 @@
           <name>Lazy initialization</name>
           <usages>
             <usage>
-              <class>ActiveStudentPhase</class>
-              <method>#registeredSubjectsCol</method>
-              <comment>Collection initialization</comment>
+              <class>OrderRelator</class>
+              <method>#goods, #reservations</method>
+              <comment>Collections initialization</comment>
             </usage>
             <usage>
-              <class>SubjectGuarantorRole</class>
-              <method>#startDate</method>
+              <class>CustomerRole</class>
+              <method>#registrationDate</method>
               <comment>Default value initialization (Date today)</comment>
             </usage>
             <usage>
                 <comment>(2 points total)</comment>
             </usage>
           </usages>
-        </impl_concept>
-        <impl_concept>
-          <name>Lookup cache</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Sorted collection (with own sortblock)</name>
-        </impl_concept>
-        <impl_concept>
-          <name>Duplicate-removing set</name>
         </impl_concept>
 
         <comment>
@@ -595,26 +532,13 @@
     
     <verification>
       <package>
-        <file fileref="semestralka-uni-tests.st" />
+        <file fileref="hrkaljak-vanazde1-strelnice-testy.st" />
       </package>
       <unit_tests>
         <unit_test>
-          <name>#testQueryTaughtSubjects</name>
+          <name>#testD1</name>
           <target>D1</target>
-          <description>Popis testu by měl být u metody ve zdrojáku. Zde pište pouze příp. extra vysvětlení.</description>
-        </unit_test>
-        <unit_test>
-          <name>#testRuleStaffOver18</name>
-          <target>P2</target>
-        </unit_test>
-        <unit_test>
-          <name>#testQueryTaughtSubjects</name>
-          <description>Popis testu by měl být u metody ve zdrojáku. Zde pište pouze příp. extra vysvětlení.</description>
-        </unit_test>
-         <unit_test>
-          <name>...</name>
-          <target>...</target>
-          <description>...</description>
+          <description>Testovací scénáře pro dotazy a pravidla jsou označeny přímo v ST projektu. Ze jména UC by mělo být jasné co testuje.</description>
         </unit_test>        
         <comment>
           <para>V tabulce unit testů vyjmenujte jednotlivé testy, které jste implementovali pro ověření správné funkčnosti aplikace - tedy
@@ -629,11 +553,9 @@
     <conclusions>
       <title>Závěr</title>
 
-      <para>Navržený a implementovaný systém...</para>
+      <para>Navržený a implementovaný systém splňuje zadané požadavky, podporuje všechny poptávané dotazy.</para>
 
-      <para>Za velkou přednost své semestrálky považuji, že se mi podařilo ...</para>
-
-      <para>Systém je dále možné rozšířit o ..., jelikož se mě podařilo pružně navrhnout způsob implementace XY.</para>
+      <para>Za velkou přednost své semestrálky považuji, že se mi podařilo nahlédnout princip UML modelovaní a naučit se základy dalšího programovacího jazyka.</para>
       
       <comment>
         <para>V závěru se pokuste shrnout, co si z realizace práce odnášíte. Jak se vám podařilo dosáhnout požadavků, apod.</para>
@@ -651,8 +573,6 @@
       </comment>
       
       <para>[1] Přednášky BIK-OMO a materiály na Eduxu. Dostupné z WWW <link url="http://stephane.ducasse.free.fr/FreeBooks/BlueBook/">http://stephane.ducasse.free.fr/FreeBooks/BlueBook/</link> (navštíveno 8.10.2011)</para>
-      <para>[2] Merunka, Vojtěch. Objektové modelování. Praha: ALfa, 2008. ISBN 978-80-87197-04-2.</para>
-      <para>[3] Goldberg, Adele; Robson, David. Smalltalk-80, the Language and its Implementation. Reading, Massachusetts: Addison-Wesley Publishing Company, 1983. ISBN 0-201-11371-6. Dostupné z WWW <link url="http://stephane.ducasse.free.fr/FreeBooks/BlueBook/">http://stephane.ducasse.free.fr/FreeBooks/BlueBook/</link> (navštíveno 8.10.2011)</para>
     </references>
   </content>
 </sproject>
